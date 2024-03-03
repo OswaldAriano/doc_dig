@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Documentos / Gestão de Documentos Requerido - FACIMIG - Universa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- #FAVICONS -->
+    <link rel="shortcut icon" href="/img/icon.png"
+          type="image/x-icon">
+    <link rel="icon" href="/img/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+
+    <link type="text/css" rel="stylesheet" href="/smart-admin/css/bootstrap.min.css?time=1709400667">
+<link type="text/css" rel="stylesheet" href="/smart-admin/css/font-awesome.min.css?time=1709400667">
+<link type="text/css" rel="stylesheet" href="/smart-admin/css/smartadmin-production.min.css?time=1709400667">
+<link type="text/css" rel="stylesheet" href="/smart-admin/css/smartadmin-skins.min.css?time=1709400667">
+<link type="text/css" rel="stylesheet" href="/css/versa.shared.css?time=1709400667">
+<link type="text/css" rel="stylesheet" href="/css/universa/documentos/documento-requerido/consultar-certificado-digital.css?time=1709400667">
+    <style>
+        #content {
+            padding: 10px 13px;
+            position: relative;
+        }
+
+        .alert {
+            margin-bottom: 2px;
+        }
+
+        .form-group.has-error {
+            position: relative;
+        }
+
+        .has-error .help-block {
+            margin: 0px;
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+        }
+
+        .form-control.select2-container {
+            padding: 0px;
+            border: 0px;
+            height: auto;
+        }
+
+        .select2-container.select2-allowclear .select2-choice abbr:before {
+            color: #000;
+            font-size: 15px;
+            position: relative;
+            left: -5px;
+        }
+
+        .select2-hidden-accessible {
+            display: none;
+        }
+
+        .form-group.has-error .select2-choice,
+        .form-group.has-error .select2-choices {
+            border-color: #b94a48;
+        }
+
+        .flash-messenger {
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .flash-messenger .close {
+            position: absolute;
+            top: 30%;
+            right: 8px;
+        }
+
+        .flash-messenger .fa {
+            position: absolute;
+            left: 3px;
+            top: 35%;
+        }
+
+        .dataTables_processing {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            display: block;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+        }
+
+        .dataTables_processing i {
+            position: fixed;
+            top: 50%;
+        }
+
+        .dataTables_processing i::before {
+            font-size: 30px;
+        }
+
+        html, body {
+            background: transparent;
+        }
+    </style>
+    <script>
+        window.baseUrl = "";
+    </script>
+
+    
+    
+    <script type="text/javascript" src="/smart-admin/js/libs/jquery-2.0.2.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/libs/jquery-ui-1.10.3.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/bootstrap/bootstrap.min.js?time=1709400667"></script>
+    <!--[if IE 8]>
+    <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+    <![endif]-->
+</head>
+<body class="">
+<div id="content">
+
+    
+<style>
+    #divAveriguacaoPendente {
+        background-color: #c3dff7;
+        padding: 10px;
+    }
+
+    .no-display {
+        display: none;
+    }
+</style>
+
+<div id="imagem-fundo" style="background-image: url();"></div>
+
+<section id="widget-grid" class="">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="jarviswidget jarviswidget-color-darken">
+                <div class="widget-body">
+
+                    <div class="col-sm-8 col-sm-offset-2 centralizar">
+                        <form action="#" method="post" novalidate="novalidate" id="form-consultar-certificado-digital"
+                              enctype="multipart/form-data">
+
+                            <div class="panel panel-primary">
+
+                                <div class="panel-heading">
+                                    <h3 class="panel-title text-center">
+                                        <i class="fa fa-search"></i>
+                                        Validação de Documento Digital
+                                    </h3>
+                                </div>
+
+                                <br/>
+                                <br/>
+
+                                <div class="row item-center">
+                                    <div class="col-xs-8 col-sm-4">
+                                        <div class="form-group">
+                                            <label for="docRegistro">* Documento de Registro
+                                                <a title="CPF ou Documento Estrangeiro">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </a>
+                                            </label>
+
+                                            <div class="form-group">
+                                                <input type="text" name="docRegistro" id="docRegistro"
+                                                       class="form-control"
+                                                       value="456.632.668-36"
+                                                       placeholder="CPF ou Documento Estrangeiro">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row item-center">
+                                    <div class="col-xs-8 col-sm-4">
+                                        <div class="form-group">
+                                            <label for="chave">* CHAVE:</label>
+
+                                            <div class="form-group">
+                                                <input type="text" name="chave" id="chave" class="form-control"
+                                                       value="58DD854E-CAE5A4455-E3F12D23-E2F05A9B" placeholder="chave">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row item-center">
+                                    <button type="button" class="btn btn-primary" id="btn-consultar">
+                                        <i class="fa fa-search"></i>
+                                        Validar
+                                    </button>
+
+                                    <button type="button" class="btn btn-secondary" id="btn-limpar">
+                                        Limpar
+                                    </button>
+                                </div>
+
+                                <br/>
+                                <br/>
+
+                                <div class="panel panel-default" style="margin: 10px ; display: none" id="painel-informacoes-documento">
+                                    <div class="panel-body">
+                                        <div class="row"  id="row-informacoes-documento">
+
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="pesNome"><b>Titular do Documento:</b></label>
+                                                    <p class="form-control-static pesNome">THAIS SANTIAGO PEREIRA</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="tdocDescricao"><b>Tipo:</b></label>
+                                                    <p class="form-control-static tdocDescricao">Carteirinha de estudante</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="docrequeridoDataRequerido"><b>Data de
+                                                            Emissão:</b></label>
+                                                    <p class="form-control-static docrequeridoDataRequerido">10/02/2024 12:48</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="cursoNome"><b>Curso:</b></label>
+                                                    <p class="form-control-static cursoNome">EDUCAÇÃO ESPECIAL (600H)</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="instituicaoResponsavel">
+                                                        <b>Instituição Responsável:</b>
+                                                    </label>
+                                                    <p class="form-control-static instituicaoResponsavel">FACULDADE IGUAÇU</p>
+                                                </div>
+                                            </div>
+
+                                            
+
+                                            
+
+                                        </div>
+
+                                        <div class="col-sm-12 text-center">
+                                            <button type="button" class="btn btn-default "
+                                                    id="botao-documento-download"><i class="fa fa-download"></i>
+                                                Download
+                                            </button>
+                                            <button type="button" class="btn btn-danger no-display"
+                                                    id="botao-solicitar-averiguar-documento"><i
+                                                        class="fa fa-exclamation-circle"></i> Analisar Validação
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL DE ATUALIZAR DOCUMENTO REQUERIDO  -->
+<div class="modal fade"
+     role="dialog"
+     aria-hidden="true"
+     data-keyboard="false"
+     data-backdrop="static"
+     aria-labelledby="label"
+     id="modal-solicitar-averiguar-documento">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button"
+                        class="close"
+                        id="fechar-docrequerido-atualizar-rejeitar">×
+                </button>
+                <h4 class="modal-title">Solicitar averiguação do Documento</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="jarviswidget jarviswidget-color-darken no-margin-bottom">
+                            <div class="widget-body">
+                                <form name="form-averiguar-documento" id="form-averiguar-documento" method="post"
+                                      enctype="multipart/form-data">
+                                    <div class="col-sm-12">
+                                        <p>Solicite a instituição para analisar este documento caso as informações não
+                                            estejam coerentes com o impresso ou com os dados exibidos nos campos!</p>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="docrequeridoMotivoAveriguar">* Motivo da solicitação:</label>
+                                            <input type="text"
+                                                   name="docrequeridoMotivoAveriguar"
+                                                   id="docrequeridoMotivoAveriguar"
+                                                   class="form-control"
+                                                   placeholder="Selecione uma opção">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button"
+                        id="btn-modal-solicitar-averiguar-documento-cancelar"
+                        class="btn btn-warning"
+                        title="Cancelar Análise">
+                    Cancelar Análise
+                </button>
+                <button type="button"
+                        id="btn-modal-solicitar-averiguar-documento-confirmar"
+                        class="btn btn-primary"
+                        title="Confirmar Análise">
+                    Confirmar Análise
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.sound_path = '/smart-admin/sound/';
+
+        $.consultarCertificadoDigital({
+            ajaxSubmit: 0,
+            listagem: 0,
+            url: {
+                consultarCertificadoDigital: '/documentos/documento-requerido/consultar-certificado-digital',
+                urlarquivoDowload: '/gerenciador-arquivos/arquivo/download',
+                averiguarDocumento: '/documentos/documento-requerido/averiguar-documento',
+            },
+            data: {
+                arrMotivoAveriguar: '[{"id":"Informa\u00e7\u00f5es do Documento impresso tem dados err\u00f4neos","text":"Informa\u00e7\u00f5es do Documento impresso tem dados err\u00f4neos"},{"id":"Tipo de Documento impresso \u00e9 incompat\u00edvel com o impresso","text":"Tipo de Documento impresso \u00e9 incompat\u00edvel com o impresso"},{"id":"Dados do Aluno do Documento n\u00e3o \u00e9 compat\u00edvel com a retornada na valida\u00e7\u00e3o","text":"Dados do Aluno do Documento n\u00e3o \u00e9 compat\u00edvel com a retornada na valida\u00e7\u00e3o"},{"id":"QR Code n\u00e3o redireciona","text":"QR Code n\u00e3o redireciona"}]',
+            },
+            value: {
+                exibirBotaoInformarDocumentoNaoCoerente: '0'
+            }
+        });
+
+    });
+</script>
+</div>
+
+<div class="provaVestibular">
+    <div class="col-xs-12 text-center" style="padding:10px">
+        Versa Tecnologia &copy; 2024    </div>
+</div>
+<script type="text/javascript" src="/versa-skeleton/js/versa.skeleton.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/plugin/masked-input/jquery.maskedinput.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/app.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/plugin/datatables/dataTables.colVis.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/plugin/datatables/dataTables.colVis.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/plugin/datatables/dataTables.tableTools.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/plugin/datatables/dataTables.bootstrap.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/plugin/select2/select2.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/material-admin/assets/js/libs/inputmask/jquery.inputmask.bundle.js?time=1709400667"></script>
+<script type="text/javascript" src="/smart-admin/js/plugin/jquery-validate/jquery.validate.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/material-admin/assets/js/libs/jquery-validation/src/localization/messages_pt_BR.js?time=1709400667"></script>
+<script type="text/javascript" src="/js/jquery.toaster.js?time=1709400667"></script>
+<script type="text/javascript" src="/js/moment.min.js?time=1709400667"></script>
+<script type="text/javascript" src="/js/universa/versa.shared.js?time=1709400667"></script>
+<script type="text/javascript" src="/js/universa/documentos/documento-requerido/consultar-certificado-digital.js?time=1709400667"></script>
+<script>
+    document.getElementById("btn-consultar").addEventListener("click", function() {
+        document.getElementById("painel-informacoes-documento").style.display= "block";
+    });
+    document.getElementById("btn-limpar").addEventListener("click", function() {
+        document.getElementById("painel-informacoes-documento").style.display= "none";
+        document.getElementById("docRegistro").value="";
+        document.getElementById("chave").value="";
+    });
+</script>
+</body>
+</html>

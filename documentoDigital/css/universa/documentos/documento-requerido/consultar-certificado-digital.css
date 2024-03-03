@@ -1,0 +1,39 @@
+.centralizar {
+    min-height: 85vh;
+    display: grid;
+    align-items: center;
+}
+
+.item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    z-index: 2;
+}
+
+#imagem-fundo {
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    width: 100%;
+    opacity: 1.0;
+    z-index: 1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw;
+}
+
+.provaVestibular > .text-center{
+    z-index: 2;
+}
+
+body {
+    overflow: hidden;
+}
